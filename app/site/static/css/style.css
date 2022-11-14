@@ -1,0 +1,16 @@
+.wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #00000060;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.loader {
+    width: 5rem;
+    height: 5rem;
+}
