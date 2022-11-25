@@ -1,9 +1,16 @@
 import json
 from flask import Blueprint, request
 
+from .models import *
+
 api = Blueprint('api', __name__, url_prefix='/api')
 
-@api.route('/')
+@api.route('/', methods=['POST'])
 def data():
-    data = {'foo': 'bar'}
-    return json.dumps(data)
+    users = []
+    result = User.query.all()
+    for value in result:
+        user = value.__dict__
+        (k := next(iter(user)), user.pop(k))
+        users.append(user)
+    return users
