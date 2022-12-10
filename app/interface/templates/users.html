@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Users Page{% endblock %}
+
+{% block content %}
+<main class="container">
+    <h1>Users Page</h1>
+    <section id="render-users">
+        <!-- List Renderization by Javasript -->
+    </section>
+    <button class="btn btn-success bg-gradient" id="add-user">Add User</button>
+    <br>
+    <a href="{{ url_for('site.index') }}">Go back to Home Page</a>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/users.js') }}"></script>
+{% endblock%}

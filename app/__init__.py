@@ -1,10 +1,13 @@
 from flask import Flask
 
+# config class
 from config import Config
 
+# blueprints
 from .api.routes import api
 from .site.views import site
 
+# extensions
 from app.extensions import *
 
 def create_app(config_class=Config):

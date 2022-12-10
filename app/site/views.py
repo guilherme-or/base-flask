@@ -6,5 +6,6 @@ site = Blueprint('site', __name__)
 def index():
     return render_template('index.html')
 
-
-
+@site.route('/users')
+def users():
+    return render_template('users.html')
