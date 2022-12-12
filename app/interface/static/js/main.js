@@ -52,8 +52,8 @@ function createTable(tableId, tableClasses) {
         .addClass(tableClasses)
         .attr('id', `${tableId}`);
 
-    let thead = $(document.createElement('thead'));
-    let tbody = $(document.createElement('tbody'));
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
 
     table
         .append(thead)
